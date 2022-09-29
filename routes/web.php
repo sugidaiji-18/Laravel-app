@@ -14,7 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('adminlte',function(){
+    return view('adminlte');
+});
+Route::get('/hello',function(){
+    return view('hello');
+});
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__.'/auth.php';
