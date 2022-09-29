@@ -12,9 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/hello',function(){
-    return 'Hello Laravel!';
-});
+
 
 
 Route::get('/', function () {
