@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//use \App\Http\Controllers\HelloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/hello',function(){
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/hello','HelloController@index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
